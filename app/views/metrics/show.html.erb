@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Process name:</b>
+  <%= @metric.process_name %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @metric.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_metric_path(@metric) %> |
+<%= link_to 'Back', metrics_path %>
