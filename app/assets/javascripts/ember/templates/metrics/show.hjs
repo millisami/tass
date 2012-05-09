@@ -1,0 +1,3 @@
+<td>{{metric.id}}</td>
+<td>{{metric.process_name}}</td>
+<td>{{metric.value}}</td>

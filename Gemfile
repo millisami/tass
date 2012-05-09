@@ -37,4 +37,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem 'emberjs-rails'
+gem 'ember-rails'
+# gem 'rack_after_reply'
+
+group :development do
+  gem 'quiet_assets'
+  gem 'thin'
+end
