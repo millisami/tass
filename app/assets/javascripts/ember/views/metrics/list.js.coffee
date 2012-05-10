@@ -1,5 +1,5 @@
 Tass.ListMetricsView = Ember.View.extend
-  templateName: 'app/templates/metrics/list',
+  templateName: 'ember/templates/metrics/list',
   metricsBinding: 'Tass.metricsController',
   
   refreshListing: ->

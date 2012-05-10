@@ -1,5 +1,5 @@
 Tass.ShowMetricView = Ember.View.extend
-  templateName: 'app/templates/metrics/show'
+  templateName: 'ember/templates/metrics/show'
   classNames: ['show-metric']
   tagName: 'tr'
   
