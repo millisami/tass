@@ -39,6 +39,7 @@ gem 'jquery-rails'
 
 gem 'ember-rails'
 # gem 'rack_after_reply'
+gem 'socky-server', '0.5.0.beta1'
 
 group :development do
   gem 'quiet_assets'
