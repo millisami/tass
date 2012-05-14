@@ -6,7 +6,33 @@
 
 <script type="text/javascript">
   $(function() {
+  
     Tass.metricsController.loadAll(<%= @metrics.to_json.html_safe %>);
+    
+      var client = new Faye.Client('http://localhost:9292/faye');
+      var subscription = client.subscribe("/metrics/new", function(message){
+        alert(message);
+      });
+      
+      subscription.callback(function(){
+        alert("Subscription is now active!");
+      });
+      subscription.errback(function(error){
+        alert(error.message);
+      });
+      
+      Logger = {
+        incoming: function(message, callback) {
+          console.log('incoming', message);
+          callback(message);
+        },
+        outgoing: function(message, callback) {
+          console.log('outgoing', message);
+          callback(message);
+        }
+      };
+
+      client.addExtension(Logger);
   });
 </script>
 

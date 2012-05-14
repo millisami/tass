@@ -16,3 +16,26 @@ Tass.displayError = (e) ->
   else
     alert "An unexpected error occurred."
 
+# socky = new Socky.Client('ws://localhost:3001/websocket/tass')
+# @set 'socky', socky
+# channel = socky.subscribe('tass-metrics')
+# socky.bind("new_metric") -> (data)
+#   alert(data)
+# socky.bind("socky:connection:established") -> (data)
+#   alert("Connection established.")
+#   
+#   function startSocky(run_title) {
+#     // Connect to Socky Server
+#     var socky = new Socky.Client("ws://<%= APP_CONFIG[:socky_server_uri] %>/websocket/cloudfactory");
+# 
+#     // Subscribe to channel
+#     var channel = socky.subscribe("<%= @run.title %>");
+# 
+#     // Bind function to 'unit_result' event
+#     channel.bind("unit_result", function(data) {
+#       data = $.parseJSON(data);
+#       console.log("Push notification aayo.");
+#       updateTable(data);
+#     });
+#   };
+#   

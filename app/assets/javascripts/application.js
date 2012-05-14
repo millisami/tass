@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require ember
 //= require ./vendor/ember-rest
+//= require ./vendor/jquery-chart-1.1.2
 //= require ember/tass
 //= require_tree .

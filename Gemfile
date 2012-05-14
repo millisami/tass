@@ -38,8 +38,8 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'ember-rails'
-# gem 'rack_after_reply'
-gem 'socky-server', '0.5.0.beta1'
+gem 'socky-client', '0.5.0.beta1', :require => false
+gem 'sidekiq'
 
 group :development do
   gem 'quiet_assets'

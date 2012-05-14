@@ -17,7 +17,11 @@ class MetricsController < ApplicationController
     @metric = Metric.new(params[:metric])
 
     if @metric.save
-      render json: @metric, status: :created, location: @metric
+      # render json: @metric, status: :created, location: @metric
+      uri = URI.parse("http://localhost:9292/faye")
+      message = {channel: "/metrics/new", data: @metric}
+      Net::HTTP.post_form(uri, message: message.to_json)
+      render nothing: true
     else
       render json: @metric.errors, status: :unprocessable_entity
     end
