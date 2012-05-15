@@ -5,7 +5,12 @@
 #= require_tree ./helpers
 #= require_tree ./templates
 
-Tass = Ember.Application.create()
+Tass = Ember.Application.create
+  ready: ->
+    # EmberTest.Notifications.refresh()
+    # EmberTest.Notifications.set("from", Math.round(new Date().getTime() / 1000))
+    this._super
+    
 window.Tass = Tass
 
 Tass.displayError = (e) ->

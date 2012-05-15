@@ -1,11 +1,18 @@
-<table>
+<table id="tass_chart">
+  <caption>Your server metric</caption>
   <thead>
     <tr>
-      <th>ID</th>
       <th>Name</th>
       <th>Value</th>
     </tr>
   </thead>
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td>250</td>
+    </tr>
+  </tfoot>
+
   <tbody>
   {{#each metrics}}
     {{view Tass.ShowMetricView metricBinding="this"}}

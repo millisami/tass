@@ -8,6 +8,7 @@
   $(function() {
   
     Tass.metricsController.loadAll(<%= @metrics.to_json.html_safe %>);
+    Tass.metricsController.refresh();
     
       var client = new Faye.Client('http://localhost:9292/faye');
       var subscription = client.subscribe("/metrics/new", function(message){
@@ -33,6 +34,8 @@
       };
 
       client.addExtension(Logger);
+      
+      
   });
 </script>
 
