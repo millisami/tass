@@ -14,6 +14,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+!schema.rb
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 #
